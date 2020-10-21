@@ -1,0 +1,564 @@
+<style media="screen">
+/*共通*/
+#pickupevent,
+#ranking,
+#item-category,
+#page-footer-banner,
+#cdn,
+.topic-path,
+#common-guide,
+.page-title {
+	display: none;
+}
+.main_ttl,
+.qbox,
+.title p,
+.code_ttl,
+.link_btn a {
+	font-family: "arial unicode ms";
+}
+.section {
+	border-bottom-color: #fff;
+}
+
+
+
+
+/*メインビジュアル*/
+.main_ttl{
+	border-bottom: solid 2px #676767;
+	border-top: solid 2px #676767;
+	color: #676767;
+	font-size: 1.6rem;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 25px 5px 50px;
+	padding: 40px 12px;
+	position: relative;
+	text-shadow: 2px 2px 3px #cecece;
+}
+.main_ttl:before, .main_ttl:after {
+	content: '';
+	position: absolute;
+	top: -10px;
+	width: 2px;
+	height: -webkit-calc(100% + 20px);
+	height: calc(100% + 20px);
+	background-color: black;
+}
+.main_ttl:before {left: 10px;}
+.main_ttl:after {right: 10px;}
+.main_ttl p {
+	margin: 0;
+	padding: 0;
+}
+.ttl_effect {
+	background: -webkit-repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+	background: repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+	border-radius: 2px;
+	color: #010079;
+	margin: 0 10px;
+	padding: 0.3em 0.5em;
+	text-shadow: 4px 4px 2px #fff;
+}
+
+
+
+
+#wrapper {
+	position: relative;
+	text-align: center;
+}
+.qabtn {
+	position: relative;
+}
+.qabtn::before,
+.qabtn::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+.qabtn,
+.qabtn::before,
+.qabtn::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 400ms;
+	transition: all 400ms;
+}
+
+
+
+
+.qbox {
+	font-size: 1.4rem;
+	margin: 20px 5px;
+}
+.q {
+	color: #f95959;
+	font-size: 2rem;
+	font-weight: bold;
+}
+.qabox a {
+	background-color: #FF8DB4;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	float: left;
+	font-size: 1.4rem;
+	margin: 0 9%;
+	padding: 12% 0;
+	text-decoration: none;
+	width: 32%;
+}
+.qabox a:nth-child(even) {
+	background-color: #62D7DE;
+}
+
+
+
+
+.title p {
+	color: dimgray;
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin: 35px 5px 5px;
+}
+.description_txt p {
+	border-radius: 4px;
+	border: 2px solid #ccc;
+	font-size: 0.8rem;
+	line-height: 1.6;
+	margin: 0 5px 15px;
+	padding: 10px;
+	text-align: justify;
+}
+.code_wrap {
+	margin: 0 2px 15px;
+}
+.code_ttl {
+	background: crimson;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 0.9rem;
+	letter-spacing: 2px;
+	margin: 0 2px 5px;
+	padding: 5px;
+}
+.link_btn {
+	margin-right: 2px;
+	text-align: right;
+}
+.link_btn a {
+	background: dimgrey;
+	border-radius: 4px;
+	color: #fff;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+	padding: 5px;
+	text-decoration: none;
+}
+
+
+
+
+/*フェードイン*/
+.fadein {
+	opacity: 0;
+	transform: translate(0, 50px);
+	transition: all 600ms;
+}
+.fadein.scrollin {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+
+.point_box {
+	opacity: 0;
+}
+</style>
+
+
+
+
+<div class="reset" id="template-tool">
+
+
+
+
+<div id="wrapper">
+	<main class="mainArea">
+		<article id="pageBody">
+
+
+			<section class="qalist_wrap">
+				<div class="main_ttl">
+					<p>
+						<div class="ttl_effect">オシャレになる為の<br>~コーディネート診断~</div>
+						<span style="font-size: 0.9rem;">あなたに合った、とっておきの<br>
+						コーデを見つけましょう♪</span>
+					</p>
+				</div>
+
+
+				<ul class="qalist wf-mplus1p fadein">
+				<li id="start" class="question">
+					<div class="qbox"><span  class="q">Q.</span>女の子にモテたいからオシャレを追求する</div>
+					<div class="qabox clearfix">
+						<a href="#1" onclick="show(1)" class="qabtn"><div class="btnBox btnBox_y">はい</div></a>
+						<a href="#11" onclick="show(11)" class="qabtn"><div class="btnBox btnBox_n">いいえ</div></a>
+					</div>
+				</li>
+				</ul>
+
+
+				<ul class="qalist wf-mplus1p">
+				<li id="1" class="question" style="display:none;">
+					<a name="#"></a>
+					<div class="qbox"><span  class="q">Q.</span>清楚な女性がタイプだ</div>
+					<div class="qabox clearfix">
+						<a href="#2" onclick="show(2)" class="qabtn"><div class="btnBox btnBox_y">はい</div></a>
+						<a href="#3" onclick="show(3)" class="qabtn"><div class="btnBox btnBox_n">いいえ</div></a>
+					</div>
+				</li>
+				<li id="2" class="question" style="display:none;">
+					<a name="#"></a>
+					<div class="qbox"><span  class="q">Q.</span>流行を追うより、どちらかと言うと定番を選ぶ</div>
+					<div class="qabox clearfix">
+						<a href="#101" onclick="show(101)" class="qabtn"><div class="btnBox btnBox_y">はい</div></a>
+						<a href="#102" onclick="show(102)" class="qabtn"><div class="btnBox btnBox_n">いいえ</div></a>
+					</div>
+				</li>
+				<li id="3" class="question" style="display:none;">
+					<a name="#"></a>
+					<div class="qbox"><span  class="q">Q.</span>デザインも大切だけど、着心地を優先する</div>
+					<div class="qabox clearfix">
+						<a href="#101" onclick="show(101)" class="qabtn"><div class="btnBox btnBox_y">はい</div></a>
+						<a href="#102" onclick="show(102)" class="qabtn"><div class="btnBox btnBox_n">いいえ</div></a>
+					</div>
+				</li>
+				</ul>
+
+
+				<ul class="qalist wf-mplus1p">
+				<li id="11" class="question" style="display:none;">
+					<a name="#"></a>
+					<div class="qbox"><span  class="q">Q.</span>カジュアルよりも、大人っぽいオシャレが好き</div>
+					<div class="qabox clearfix">
+						<a href="#22" onclick="show(22)" class="qabtn"><div class="btnBox btnBox_y">はい</div></a>
+						<a href="#33" onclick="show(33)" class="qabtn"><div class="btnBox btnBox_n">いいえ</div></a>
+					</div>
+				</li>
+				<li id="22" class="question" style="display:none;">
+					<a name="#"></a>
+					<div class="qbox"><span  class="q">Q.</span>派手なファッションが苦手だ</div>
+					<div class="qabox clearfix">
+						<a href="#103" onclick="show(103)" class="qabtn"><div class="btnBox btnBox_y">はい</div></a>
+						<a href="#104" onclick="show(104)" class="qabtn"><div class="btnBox btnBox_n">いいえ</div></a>
+					</div>
+				</li>
+				<li id="33" class="question" style="display:none;">
+					<a name="#"></a>
+					<div class="qbox"><span  class="q">Q.</span>カッコ良さより機能性を重視する</div>
+					<div class="qabox clearfix">
+						<a href="#103" onclick="show(103)" class="qabtn"><div class="btnBox btnBox_y">はい</div></a>
+						<a href="#104" onclick="show(104)" class="qabtn"><div class="btnBox btnBox_n">いいえ</div></a>
+					</div>
+				</li>
+				</ul>
+			</section>
+
+
+
+<!-- ////////////////////////////////////////////////////////////////// -->
+
+
+
+
+			<section class="answerList">
+				<div id="101" style="display:none;" class="answer point_box">
+					<div class="box">
+						<div class="title">
+							<p><span style="font-size: 1.8rem;">~診断結果~</span><br>
+							『お目当ての女の子に好感を持ってもらいたい狙い撃ちタイプ』</p>
+						</div>
+						<div class="description_txt">
+							<p>清楚な女の子が大好きなあなた。清楚な女の子は、男子のファッションで一番大切にするポイントはなんといっても「清潔感」。清潔感を出すファッションのポイントは、シンプルで細身のシルエット。</p>
+						</div>
+					<div class="code_wrap">
+						<h4 class="code_ttl">そんなあなたにぴったりなコーデはコチラ</h4>
+						<ul class="clearfix code_wrap">
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=22234&m=diag_A_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd22234_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=22232&m=diag_A_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd22232_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=19375&m=diag_A_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd19375_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+						</ul>
+						<p class="link_btn"><a href="https://shop.menz-style.com/" class="square_btn">トップページに戻る</a></p>
+						<p class="link_btn mb50"><a onclick="window.location.reload();">最初からやり直す</a></p>
+
+
+						<!-- 回遊性 -->
+						<section class="mb50 ml5 mr5">
+							<!-- ランキング -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-ranking.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/rankingpage#head" target="_blank"><img src="/printimage.php?id=20170314_ranking_top" alt="" class="photo" width="80%"></a></p>
+							</div>
+							<!-- 新作 -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-newarrival.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/newarrival#head" target="_blank"><img src="/printimage.php?id=20170509_newarrival_800x400" alt="" class="photo" width="80%"></a></p>
+							</div>
+							<!-- セット買い -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-set.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/index?category_id=100#head" target="_blank"><img src="/printimage.php?id=20170531_AcceCP_980x160" alt="" class="photo" width="90%"></a></p>
+							</div>
+						</section>
+						<!-- 回遊性 -->
+					</div>
+					</div>
+				</div>
+
+
+				<div id="102" style="display:none;" class="answer point_box">
+					<div class="box">
+						<div class="title">
+							<p><span style="font-size: 1.8rem;">~診断結果~</span><br>
+							『出来るだけたくさんの女の子にモテたい八方美人タイプ』</p>
+						</div>
+						<div class="description_txt">
+							<p>女の子にはガンガンアタックできるあなたはファッションも流行をいち早く取り入れたり、オシャレなポイントを重視したいオシャレ番長タイプ。新しいファッションも勇気を持って取り入れどんどんオシャレになっていく…</p>
+						</div>
+					<div class="code_wrap">
+						<h4 class="code_ttl">そんなあなたにぴったりなコーデはコチラ</h4>
+						<ul class="clearfix code_wrap">
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=16480&m=diag_B_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd16480_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=22150&m=diag_B_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd22150_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=22433&m=diag_B_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd22433_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+						</ul>
+						<p class="link_btn"><a href="https://shop.menz-style.com/" class="square_btn">トップページに戻る</a></p>
+						<p class="link_btn mb50"><a onclick="window.location.reload();">最初からやり直す</a></p>
+
+
+						<!-- 回遊性 -->
+						<section class="mb50 ml5 mr5">
+							<!-- ランキング -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-ranking.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/rankingpage#head" target="_blank"><img src="/printimage.php?id=20170314_ranking_top" alt="" class="photo" width="80%"></a></p>
+							</div>
+							<!-- 新作 -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-newarrival.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/newarrival#head" target="_blank"><img src="/printimage.php?id=20170509_newarrival_800x400" alt="" class="photo" width="80%"></a></p>
+							</div>
+							<!-- セット買い -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-set.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/index?category_id=100#head" target="_blank"><img src="/printimage.php?id=20170531_AcceCP_980x160" alt="" class="photo" width="90%"></a></p>
+							</div>
+						</section>
+						<!-- 回遊性 -->
+					</div>
+					</div>
+				</div>
+
+
+				<div id="103" style="display:none;" class="answer point_box">
+					<div class="box">
+						<div class="title">
+							<p><span style="font-size: 1.8rem;">~診断結果~</span><br>
+							『結局、無難が一番だよね、と思っている弱腰タイプ』 </p>
+						</div>
+						<div class="description_txt">
+							<p>ファッションに対して積極的にチャレンジするよりも、自分の好きな服を選んでいくあなた。でも周りから見ると、いつも同じような服を着ているイメージを持たれているかも。クローゼットのなかも、似たような服が並んでいませんか？ファッションでオシャレになっていくポイントは、色々な服に挑戦する事。色々な服をたくさん着ていくことで、今までの自分になかった新しいファッションが見つかって、周りの人からオシャレになったね、なんて言われることも。</p>
+						</div>
+					<div class="code_wrap">
+						<h4 class="code_ttl">そんなあなたにぴったりなコーデはコチラ</h4>
+						<ul class="clearfix code_wrap">
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=20201&m=diag_C_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd20201_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=20966&m=diag_C_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd20966_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=22210&m=diag_C_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd22210_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+						</ul>
+						<p class="link_btn"><a href="https://shop.menz-style.com/" class="square_btn">トップページに戻る</a></p>
+						<p class="link_btn mb50"><a onclick="window.location.reload();">最初からやり直す</a></p>
+
+
+						<!-- 回遊性 -->
+						<section class="mb50 ml5 mr5">
+							<!-- ランキング -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-ranking.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/rankingpage#head" target="_blank"><img src="/printimage.php?id=20170314_ranking_top" alt="" class="photo" width="80%"></a></p>
+							</div>
+							<!-- 新作 -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-newarrival.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/newarrival#head" target="_blank"><img src="/printimage.php?id=20170509_newarrival_800x400" alt="" class="photo" width="80%"></a></p>
+							</div>
+							<!-- セット買い -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-set.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/index?category_id=100#head" target="_blank"><img src="/printimage.php?id=20170531_AcceCP_980x160" alt="" class="photo" width="90%"></a></p>
+							</div>
+						</section>
+						<!-- 回遊性 -->
+					</div>
+					</div>
+				</div>
+
+
+				<div id="104" style="display:none;" class="answer point_box">
+					<div class="box">
+						<div class="title">
+							<p><span style="font-size: 1.8rem;">~診断結果~</span><br>
+							『俺のカッコよさをトコトン追求するタイプ』 </p>
+						</div>
+						<div class="description_txt">
+							<p>徹底的に自分がカッコいいと思うファッションを取り入れていくタイプ。周りの目線も気にすることなくオシャレに挑戦していくので、たまにオシャレを理解されないことも。ただ一番早くオシャレにたどり着く人のタイプなので、オシャレ番長と言われる人も多いのがこのタイプ。</p>
+						</div>
+					<div class="code_wrap">
+						<h4 class="code_ttl">そんなあなたにぴったりなコーデはコチラ</h4>
+						<ul class="clearfix code_wrap">
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=22092&m=diag_D_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd22092_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=22288&m=diag_D_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd22288_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+							<li align="center" class="fleft" style="width: 33.3%;">
+								<a href="/coordinate/detail?coordination_id=23073&m=diag_D_SP#path" target="_blank">
+									<img src="/printimage.php?id=cd23073_1" alt="" class="photo" style="width: 98%;">
+								</a>
+							</li>
+						</ul>
+						<p class="link_btn"><a href="https://shop.menz-style.com/" class="square_btn">トップページに戻る</a></p>
+						<p class="link_btn mb50"><a onclick="window.location.reload();">最初からやり直す</a></p>
+
+
+						<!-- 回遊性 -->
+						<section class="mb50 ml5 mr5">
+							<!-- ランキング -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-ranking.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/rankingpage#head" target="_blank"><img src="/printimage.php?id=20170314_ranking_top" alt="" class="photo" width="80%"></a></p>
+							</div>
+							<!-- 新作 -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-newarrival.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/newarrival#head" target="_blank"><img src="/printimage.php?id=20170509_newarrival_800x400" alt="" class="photo" width="80%"></a></p>
+							</div>
+							<!-- セット買い -->
+							<div class="mb35">
+								<p align="center"><img src="/u/freeimages/special/2017/20171215-xmascp-set.jpg" alt="" class="photo" width="100%"></p>
+								<p align="center"><a href="/item/index?category_id=100#head" target="_blank"><img src="/printimage.php?id=20170531_AcceCP_980x160" alt="" class="photo" width="90%"></a></p>
+							</div>
+						</section>
+						<!-- 回遊性 -->
+					</div>
+					</div>
+				</div>
+			</section>
+
+
+		</article>
+	</main>
+</div>
+
+
+
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script>
+$(function() {
+		$(window).scroll(function() {
+			$(".fadein").each(function() {
+				var elemPos = $(this).offset().top,
+					scroll = $(window).scrollTop(),
+					windowHeight = $(window).height();
+
+			if (scroll > elemPos - windowHeight + 200) {
+				$(this).addClass("scrollin");
+			};
+		});
+	});
+
+
+	$('a[href^=#]').click(function() {
+		var speed = 380;
+		var href = $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top - 180;
+		$('body,html').animate({scrollTop:position}, speed, 'swing');
+		return false;
+	});
+	h = $(window).height();
+	h = h - 50;
+	$(".question").css("min-height", h + "px");
+	$(".answerList .box").css("min-height", h + "px");
+});
+
+
+function show(idName) {
+	$("#" + idName).show(380);
+
+	$(".answer").each(function() {
+		if ($(this).css("display") == "block") {
+			$(".qalist_wrap").css("display", "none");
+			$(".point_box").animate({opacity: 1},800);
+		};
+	});
+};
+</script>
